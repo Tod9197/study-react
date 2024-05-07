@@ -7,9 +7,9 @@ export function Headline(props) {
     <>
       <div className={styles.description}>
         <p>
-          {props.page} page&nbsp;
-          <code className={styles.code}>src/pages/{props.page}.js</code>
+          {props.page} page&nbsp;{props.children}
         </p>
+
         <div>
           <a
             href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
