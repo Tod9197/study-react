@@ -1,11 +1,11 @@
-import styles from "@/styles/Home.module.css";
+import classes from "./Headline.module.css";
 import Image from "next/image";
 
 export function Headline(props) {
   console.log(props.title);
   return (
     <>
-      <div className={styles.description}>
+      <div className={classes.description}>
         <p>
           {props.page} page&nbsp;{props.children}
         </p>
@@ -20,7 +20,7 @@ export function Headline(props) {
             <Image
               src="/vercel.svg"
               alt="Vercel Logo"
-              className={styles.vercelLogo}
+              className={classes.vercelLogo}
               width={100}
               height={24}
               priority
@@ -29,9 +29,9 @@ export function Headline(props) {
         </div>
       </div>
 
-      <div className={styles.center}>
+      <div className={classes.center}>
         <Image
-          className={styles.logo}
+          className={classes.logo}
           src="/next.svg"
           alt="Next.js Logo"
           width={180}
