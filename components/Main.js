@@ -10,7 +10,7 @@ export function Main(props) {
     <>
       <main className={`${styles.main} ${inter.className}`}>
         <Headline page={props.page}>
-          {<code className={styles.code}>src/{props.page}/index.js</code>}
+          {<code className={styles.code}>src/{props.page}.js</code>}
         </Headline>
         <Links />
       </main>
