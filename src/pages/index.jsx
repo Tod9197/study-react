@@ -2,26 +2,21 @@ import Head from "next/head";
 import { Inter } from "next/font/google";
 import { Main } from "../components/Main/Main";
 import { Header } from "../components/Header/Header";
-import { useCallback, useEffect } from "react";
-import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const foo = 1;
+  const [count, setCount] = useState(0);
 
-  const handleClick = useCallback((e) => {
-    console.log(e.target.href);
-    e.preventDefault();
-    alert(foo);
-  }, []);
+  const handleClick = (e) => {
+    setCount((count) => count + 1);
+  };
 
   useEffect(() => {
-    console.log("マウント時");
     document.body.style.backgroundColor = "lightblue";
 
     return () => {
-      console.log("アンマウント時");
       document.body.style.backgroundColor = "";
     };
   }, []);
@@ -32,14 +27,15 @@ export default function Home() {
         <title>Index Page</title>
       </Head>
       <Header />
-      <Main page="index" />
-      <Link
+      <h2 style={{ textAlign: "center" }}>{count}</h2>
+      <button
         style={{ display: "block", margin: "auto", width: "200px" }}
         href="/about"
         onClick={handleClick}
       >
         ボタン
-      </Link>
+      </button>
+      <Main page="index" />
     </>
   );
 }

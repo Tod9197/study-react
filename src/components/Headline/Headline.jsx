@@ -2,7 +2,6 @@ import classes from "./Headline.module.css";
 import Image from "next/image";
 
 export function Headline(props) {
-  console.log(props.title);
   return (
     <>
       <div className={classes.description}>
