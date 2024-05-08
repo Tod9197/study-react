@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import { Main } from "../components/Main/Main";
 import { Header } from "../components/Header/Header";
 import { useCallback } from "react";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,13 +23,13 @@ export default function Home() {
       </Head>
       <Header />
       <Main page="index" />
-      <a
+      <Link
         style={{ display: "block", margin: "auto", width: "200px" }}
         href="/about"
         onClick={handleClick}
       >
         ボタン
-      </a>
+      </Link>
     </>
   );
 }
