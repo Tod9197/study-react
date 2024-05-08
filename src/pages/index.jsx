@@ -22,7 +22,11 @@ export default function Home() {
       </Head>
       <Header />
       <Main page="index" />
-      <a href="/about" onClick={handleClick}>
+      <a
+        style={{ display: "block", margin: "auto", width: "200px" }}
+        href="/about"
+        onClick={handleClick}
+      >
         ボタン
       </a>
     </>
