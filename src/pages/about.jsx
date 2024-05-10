@@ -6,7 +6,7 @@ import { Header } from "../components/Header/Header";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function About({
-  count,
+  doubleCount,
   isShow,
   handleClick,
   handleDisplay,
@@ -21,7 +21,7 @@ export default function About({
         <title>About Page</title>
       </Head>
       <Header />
-      {isShow ? <h2 style={{ textAlign: "center" }}>{count}</h2> : null}
+      {isShow ? <h2 style={{ textAlign: "center" }}>{doubleCount}</h2> : null}
 
       <button
         style={{ display: "block", margin: "auto", width: "200px" }}
