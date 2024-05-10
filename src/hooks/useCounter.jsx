@@ -6,7 +6,7 @@ export const useCounter = () => {
 
   const doubleCount = useMemo(() => {
     return count * 2;
-  }, []);
+  }, [count]);
 
   const handleClick = useCallback(() => {
     if (count < 10) {
