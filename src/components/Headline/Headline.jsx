@@ -5,9 +5,7 @@ export function Headline(props) {
   return (
     <>
       <div className={classes.description}>
-        <p>
-          {props.page} page&nbsp;{props.children}
-        </p>
+        <p>アイテムの数は{props.children}個です。</p>
 
         <div>
           <a
