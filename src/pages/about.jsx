@@ -2,17 +2,19 @@ import Head from "next/head";
 import { Inter } from "next/font/google";
 import { Main } from "../components/Main/Main";
 import { Header } from "../components/Header/Header";
-import { useCallback, useEffect, useState } from "react";
-import { useCounter } from "@/hooks/useCounter";
-import { useInputArray } from "@/hooks/useInputArray";
-import { useLightBlue } from "@/hooks/useLightBlue";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function About() {
-  const { count, isShow, handleClick, handleDisplay } = useCounter();
-  const { text, array, handleChange, handleAdd } = useInputArray();
-  useLightBlue();
+export default function About({
+  count,
+  isShow,
+  handleClick,
+  handleDisplay,
+  text,
+  array,
+  handleChange,
+  handleAdd,
+}) {
   return (
     <>
       <Head>

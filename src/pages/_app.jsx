@@ -1,7 +1,14 @@
 import "@/styles/globals.css";
 import Head from "next/head";
+import { useCounter } from "@/hooks/useCounter";
+import { useInputArray } from "@/hooks/useInputArray";
+import { useLightBlue } from "@/hooks/useLightBlue";
 
 export default function App({ Component, pageProps }) {
+  const counter = useCounter();
+  const inputArray = useInputArray();
+  useLightBlue();
+
   return (
     <>
       <Head>
@@ -10,7 +17,7 @@ export default function App({ Component, pageProps }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Component {...pageProps} />
+      <Component {...pageProps} {...counter} {...inputArray} />
     </>
   );
 }
